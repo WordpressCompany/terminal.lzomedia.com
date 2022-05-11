@@ -24,8 +24,10 @@
 
         <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
             <a href="<?php home_url(); ?>" class="no-style">
-                <?php the_title(); ?>
+              <?php bloginfo('name'); ?>
             </a>
+            <br>
+            <?php bloginfo('description'); ?>
         </div>
 
         <nav class="terminal-menu col-lg-6 col-md-6 col-xs-12">
