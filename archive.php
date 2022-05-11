@@ -5,14 +5,10 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Archives
+                Archive: <?php single_cat_title(); ?>
             </h1>
             <ol class="terminal-toc">
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-                <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-                <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
+              <?php wp_get_archives(); ?>
             </ol>
         </div>
     </div>
