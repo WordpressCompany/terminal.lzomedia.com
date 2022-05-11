@@ -117,3 +117,10 @@ span.heart {
     color: green;
     font-size: 1.5em;
 }
+img{
+    width: auto !important;
+    content: "";
+    clear: both;
+    display: table;
+    max-width: -webkit-fill-available;
+}
