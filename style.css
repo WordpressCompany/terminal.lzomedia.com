@@ -22,7 +22,7 @@ This theme is automatically update using github release system.
 :root {
     --global-font-size: 1.3em;
     --global-line-height: 1.4em;
-    --font-stack: Oldenburg;
+    --font-stack: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
     --background-color: #222225;
     --page-width: 60em;
     --font-color: #a7aaad;
@@ -108,4 +108,19 @@ This theme is automatically update using github release system.
     0%{opacity: 0;}
     50%{opacity: .9;}
     100%{opacity: 1;}
+}
+hr {
+ margin-top: 10px;
+    margin-bottom: 5px;
+}
+span.heart {
+    color: green;
+    font-size: 1.5em;
+}
+img{
+    width: auto !important;
+    content: "";
+    clear: both;
+    display: table;
+    max-width: -webkit-fill-available;
 }

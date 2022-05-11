@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
           type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">-->
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
@@ -24,8 +24,12 @@
 
         <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
             <a href="<?php home_url(); ?>" class="no-style">
-                <?php the_title(); ?>
+              <?php bloginfo('name'); ?>
             </a>
+            <br>
+            <small style="font-size: 12px">
+                <?php bloginfo('description'); ?>
+            </small>
         </div>
 
         <nav class="terminal-menu col-lg-6 col-md-6 col-xs-12">
