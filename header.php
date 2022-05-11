@@ -27,7 +27,9 @@
               <?php bloginfo('name'); ?>
             </a>
             <br>
-            <?php bloginfo('description'); ?>
+            <small style="font-size: 12px">
+                <?php bloginfo('description'); ?>
+            </small>
         </div>
 
         <nav class="terminal-menu col-lg-6 col-md-6 col-xs-12">

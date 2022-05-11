@@ -109,3 +109,11 @@ This theme is automatically update using github release system.
     50%{opacity: .9;}
     100%{opacity: 1;}
 }
+hr {
+ margin-top: 10px;
+    margin-bottom: 5px;
+}
+span.heart {
+    color: green;
+    font-size: 1.5em;
+}
