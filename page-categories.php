@@ -1,3 +1,8 @@
+<?php
+/**
+ * Template Name: Categories
+ */
+?>
 <?php get_header(); ?>
 
 <section class="container">
