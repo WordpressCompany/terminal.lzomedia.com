@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template Name: News
+ */
+?>
+
 <?php get_header(); ?>
 
 <section class="container">

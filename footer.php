@@ -1,4 +1,7 @@
-
+<?php
+$protocols = array('https://');
+$domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
+?>
 <footer class="container">
     <hr>
     <div class="row">
@@ -13,7 +16,7 @@
 
 <!-- This is the area where is loaded the first time the page is loaded -->
 <div id="editor" class="terminal shell" style="margin-top: 4em;">
-    <code data-term-input>Connecting to development.sh ...</code>
+    <code data-term-input>Connecting to <?php echo $domain;?>...</code>
     <code data-term-input>Connected...</code>
     <code data-term-input>Page load complete</code>
 </div>
