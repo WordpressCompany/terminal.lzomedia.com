@@ -1,5 +1,7 @@
 <?php
-//// The theme update logic
+// Include required files
+require 'recommend/register-required-plugins.php';
+// The theme update logic
 require 'update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/lzomedia/terminal/',
