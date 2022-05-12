@@ -14,7 +14,7 @@
 				$paged    = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$args     = [
 					'post_type'      => 'post',
-					'posts_per_page' => 25,
+					'posts_per_page' => 20,
 					'paged'          => $paged,
 				];
 				$wp_query = new WP_Query( $args );
