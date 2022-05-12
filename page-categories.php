@@ -7,7 +7,7 @@
 
 <section class="container">
     <div class="row">
-        <ul class="cat-menu list-group">
+        <ol class="terminal-oc">
 			<?php
 			$args       = array(
 				'orderby' => 'slug',
@@ -18,7 +18,7 @@
 				echo '<li class="list-group-item d-flex align-items-center"><a href="' . get_category_link( $category->term_id ) . '" rel="bookmark"><i class="fa fa-chevron-right" aria-hidden="true"></i>' . $category->name . '<span> -> ' . $category->category_count . '</span></a></li>';
 			}
 			?>
-        </ul>
+        </ol>
         <div class="col-lg-12">
 
             <script src="https://cdn.amcharts.com/lib/4/core.js"></script>

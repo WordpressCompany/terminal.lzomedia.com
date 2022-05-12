@@ -124,3 +124,6 @@ img{
     display: table;
     max-width: -webkit-fill-available;
 }
+div.pagination > a{
+    color: var(--text);
+}
