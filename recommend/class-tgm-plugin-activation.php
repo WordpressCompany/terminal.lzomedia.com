@@ -16,7 +16,7 @@
  */
 
 /*
-	Copyright 2011 Thomas Griffin (thomasgriffinmedia.com)
+	Copyright 2011 Stefan (LzoMedia.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -317,12 +317,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function init() {
 			/**
-			 * By default TGMPA only loads on the WP back-end and not in an Ajax call. Using this filter
+			 * By default, TGMPA only loads on the WP back-end and not in an Ajax call. Using this filter
 			 * you can overrule that behaviour.
 			 *
 			 * @since 2.5.0
 			 *
-			 * @param bool $load Whether or not TGMPA should load.
+			 * @param bool $load Whether TGMPA should load.
 			 *                   Defaults to the return of `is_admin() && ! defined( 'DOING_AJAX' )`.
 			 */
 			if ( true !== apply_filters( 'tgmpa_load', ( is_admin() && ! defined( 'DOING_AJAX' ) ) ) ) {
