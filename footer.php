@@ -6,7 +6,7 @@ $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
     <hr>
     <div class="row">
         <div class="col-lg-12">
-            <small>Design with <span class="heart">&hearts;</span> and open source in mind by Lzo Media</small>
+            <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a href="https://development.sh">Development.sh</a></small>
         </div>
     </div>
 </footer>
@@ -22,7 +22,6 @@ $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" async defer></script>
-<script src="https://buttons.github.io/buttons.js"  async defer></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/app.js"></script>
 </body>
 </html>
