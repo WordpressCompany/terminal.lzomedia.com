@@ -23,7 +23,7 @@
     <div class="row">
 
         <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
-            <a href="<?php bloginfo('wpurl'); ?>" class="no-style">
+            <a href="<?php home_url(); ?>" class="no-style">
               <?php bloginfo('name'); ?>
             </a>
             <br>
