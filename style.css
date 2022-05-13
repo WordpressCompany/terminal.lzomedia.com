@@ -127,3 +127,9 @@ img{
 div.pagination > a{
     color: var(--text);
 }
+ol.terminal-toc li a{
+    background: none !important;
+}
+ol{
+    list-style: none !important;
+}
