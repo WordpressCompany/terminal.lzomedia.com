@@ -7,27 +7,26 @@
 
 <section class="container">
     <div class="row">
-        <ol class="terminal-oc">
-			<?php
-			$args       = array(
-				'orderby' => 'slug',
-				'parent'  => 0
-			);
-			$categories = get_categories( $args );
 
-            $array = array();
+		<?php
+		$args       = array(
+			'orderby' => 'slug',
+			'parent'  => 0
+		);
+		$categories = get_categories( $args );
 
-			foreach ( $categories as $category ) {
+		$array = array();
 
-				$array[] = [
-					'tag' => $category->name,
-					'count' => $category->count,
-				];
+		foreach ( $categories as $category ) {
 
-//                echo '<li class="list-group-item d-flex align-items-center"><a href="' . get_category_link( $category->term_id ) . '" rel="bookmark"><i class="fa fa-chevron-right" aria-hidden="true"></i>' . $category->name . '<span> -> ' . $category->category_count . '</span></a></li>';
-			}
-			?>
-        </ol>
+			$array[] = [
+				'tag'   => $category->name,
+				'count' => $category->count,
+			];
+
+		}
+		?>
+
         <div class="col-lg-12">
 
             <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
@@ -40,15 +39,14 @@
 
                     am4core.useTheme(am4themes_animated);
 
-                    var chart = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
+                    const chart = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
                     chart.fontFamily = "Courier New";
-                    var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+                    const series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
                     series.randomness = 0.1;
-                    series.rotationThreshold = 0.5;
+                    series.rotationThreshold = 0.2;
 
 
                     series.data = <?php echo json_encode( $array ); ?>;
-
 
 
                     series.dataFields.word = "tag";
@@ -62,19 +60,19 @@
                         "dataField": "value"
                     });
 
-                    series.labels.template.url = "<?php echo bloginfo('wpurl');?>/category/{word}";
+                    series.labels.template.url = "<?php echo bloginfo( 'wpurl' );?>/category/{word}";
                     series.labels.template.urlTarget = "_blank";
                     series.labels.template.tooltipText = "{word}: {value}";
 
-                    var hoverState = series.labels.template.states.create("hover");
+                    const hoverState = series.labels.template.states.create("hover");
                     hoverState.properties.fill = am4core.color("#FF0000");
 
-                    var subtitle = chart.titles.create();
-                    subtitle.text = "(click to open)";
+
 
                     var title = chart.titles.create();
-                    title.text = "Most Popular Categories @ <?php bloginfo( 'name' ); ?>";
+                    title.text = "Most Popular Categories in <?php bloginfo( 'name' ); ?>";
                     title.fontSize = 20;
+                    title.color = "#00FF00";
                     title.fontWeight = "800";
 
                 }); // end am4core.ready()
