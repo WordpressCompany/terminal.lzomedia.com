@@ -6,7 +6,7 @@ $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
     <hr>
     <div class="row">
         <div class="col-lg-12">
-            <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a href="https://development.sh">Development.sh</a></small>
+            <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a href="https://github.com/lzomedia">Stefan Izdrail</a></small>
         </div>
     </div>
 </footer>
