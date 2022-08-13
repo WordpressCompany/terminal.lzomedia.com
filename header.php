@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta charset="<?php bloginfo('charset'); ?>"/>
-    <title><?php wp_title(''); ?> - Senior Backend Developer</title>
+    <title>Stefan Izdrail - Senior Backend Developer</title>
     <?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
