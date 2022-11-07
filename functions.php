@@ -1,4 +1,6 @@
 <?php
+//// Include the rest auth logic
+include 'includes/auth.php';
 //// The theme update logic
 require 'update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
@@ -32,3 +34,30 @@ function wpse_wpautop_nobr( $content ) {
 
 add_filter( 'the_content', 'wpse_wpautop_nobr' );
 add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
+
+//register custom field for the rest
+
+//register custom fields for the rest
+add_action( 'rest_api_init', 'register_custom_fields_rest' );
+function register_custom_fields_rest(): void
+{
+    register_rest_field( 'post', 'tags_slug', [
+        'update_callback' => function ( $names, $post ) {
+            return wp_set_post_tags( $post->ID, $names );
+        }
+    ] );
+
+    register_rest_field( 'post', 'categories_slug', [
+        'update_callback' => function ( $slugs, $post ) {
+            $ids = [];
+
+            foreach ( wp_parse_list( $slugs ) as $slug ) {
+                if ( $category = get_category_by_slug( $slug ) ) {
+                    $ids[] = $category->term_id;
+                }
+            }
+
+            return ( ! empty( $ids ) ) ? wp_set_post_categories( $post->ID, $ids ) : false;
+        }
+    ] );
+}
