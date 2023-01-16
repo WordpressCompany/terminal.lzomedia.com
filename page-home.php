@@ -4,53 +4,59 @@
 <section class="container">
     <div class="row">
         <div class="col-lg-12">
-            <?php the_content(); ?>
+            <h1 class="text-left">
+                <?php the_title();?>
+            </h1>
+            <p>
+                <?php the_content();?>
+            </p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <h1>
-                Recent Posts
-            </h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        Latest News
+                    </th>
+                </tr>
+                </thead>
+                <?php
+                $paged = get_query_var('paged');
+                $args     = [
+                    'post_type'      => 'post',
+                    'posts_per_page' => 5,
+                    'paged' => $paged,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'post_status' => 'publish',
+                ];
+                $wp_query = new WP_Query( $args );
 
-	        <?php
-	        $recent_posts = wp_get_recent_posts(array(
-		        'numberposts' => 25,
-                'orderby' => 'post_date',
-                'order' => 'ASC',
-		        'post_status' => 'publish' // Show only the published posts
-	        ));
-	        foreach( $recent_posts as $post_item ) : ?>
-            <div class="row">
-                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                    <div class="box">
-                        <a href="<?php echo get_permalink($post_item['ID']) ?>" title="<?php echo $post_item['post_title'] ?>">
-		                    <?php echo $post_item['post_title'] ?>
-                        </a>
-                    </div>
-                </div>
+                while ( have_posts() ) : the_post(); ?>
 
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                <?php endwhile; ?>
+            </table>
+        </div>
+    </div>
 
-                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                    <div class="box">
-                        <?php the_time('F j, Y') ?>
-                    </div>
-                </div>
-
-
+    <div class="row center-xs" >
+        <div class="col-xs-6">
+            <div class="box">
+                <a href="<?php bloginfo('wpurl'); ?>/news/" class="btn btn-primary">
+                    View More News
+                </a>
             </div>
-            <?php endforeach; ?>
-
-            <div class="row center-xs" style="margin-top: 4rem;margin-bottom: 4rem">
-                <div class="col-xs-6">
-                    <div class="box">
-                        <a href="<?php bloginfo('wpurl'); ?>/news/" class="btn btn-primary">
-                            View More News
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>

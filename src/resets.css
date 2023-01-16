@@ -1,0 +1,42 @@
+@media only screen and (min-width: 30em){
+
+    .terminal-menu ul {
+        justify-content: flex-start !important;
+    }
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+img{
+    width: auto !important;
+    content: "";
+    clear: both;
+    display: table;
+    max-width: -webkit-fill-available;
+}
+div.pagination > a{
+    color: var(--text);
+}
+ol.terminal-toc li a{
+    background: none !important;
+}
+ol{
+    list-style: none !important;
+}
+
+strong.entity{
+    color: green !important;
+}
+strong.entity span {
+    display: none;
+}
+
+a.next{
+    display: block;
+
+}
+a.prev{
+    display: block;
+
+}

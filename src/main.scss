@@ -1,0 +1,121 @@
+:root {
+  --global-font-size: 1.4rem !important;
+  --global-font-size--menu: 1.8rem !important;
+  --global-line-height: 1.4em;
+  --global-space: 10px;
+  --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+  DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+  serif;
+  --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+  DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+  serif;
+  --background-color: #222225 !important;
+  --page-width: 60em;
+  --font-color: #a7aaad !important;
+  --invert-font-color: #222225;
+  --secondary-color: #a3abba;
+  --tertiary-color: #a3abba;
+  --primary-color: green !important;
+  --error-color: #62c4ff;
+  --progress-bar-background: #3f3f44;
+  --progress-bar-fill: #62c4ff;
+  --code-bg-color: #3f3f44 !important;
+  --input-style: solid;
+  --display-h1-decoration: none;
+}
+@import "terminal.css";
+@import "resets.css";
+
+html{
+  margin-top: 0 !important;
+
+  body{
+    .terminal {
+      border-radius:3px;
+      color: var(--text);
+      display: block;
+      font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+      font-size: 1em;
+      font-smooth: antialiased;
+      line-height: 1.2em;
+      padding: 1em;
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      code {
+        display: block;
+      }
+    }
+
+    .editor {
+      counter-reset: line;
+      code:before {
+        color: var(--prompt);
+        content: counter(line);
+        counter-increment: line;
+        margin-right: 0.5em;
+      }
+    }
+
+    .text-left {
+      text-align: left !important;
+    }
+
+    main{
+      --global-font-size--menu: 1.8rem !important;
+    }
+    span.heart {
+      color: green;
+      font-size: 1.5em;
+    }
+    .terminal-menu li a:not(.btn){
+        color: var(--primary-color);
+      font-size: var(--global-font-size--menu);
+    }
+
+
+    pre {
+      background-color: var(--code-bg-color) !important;
+      overflow-x: initial;
+      code{
+        background-color: var(--code-bg-color) !important;
+        overflow-x: initial;
+      }
+    }
+
+  }
+
+
+
+
+}
+
+
+[data-term-replay] {
+  bottom: 0px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.5em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 0px;
+}
+
+[data-term-replay]:hover {
+  color: var(--text);
+}
+
+.shell [data-term-input]:before {
+  color: var(--prompt);
+  content: '$';
+  margin-right: 0.5em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+[data-term-cursor]:after {
+  content: '_';
+  animation: blink 1s infinite;
+}

@@ -1,22 +1,21 @@
-<?php get_header();?>
-
+<?php get_header(); ?>
 
 
 <section class="container">
-        <div class="row">
-            <div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-12">
 
-                <h1 class="text-center">
-                    <?php the_title();?>
-                </h1>
+            <h1 class="text-center">
+                <?php the_title(); ?>
+            </h1>
 
-                <br>
+            <br>
 
-                <?php the_content();?>
+            <?php the_content(); ?>
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <?php get_footer() ?>

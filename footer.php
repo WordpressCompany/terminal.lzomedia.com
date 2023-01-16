@@ -20,8 +20,8 @@ $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
     <code data-term-input>Connected...</code>
     <code data-term-input>Page load complete</code>
 </div>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" async defer></script>
+<script src="https://kit.fontawesome.com/0ee24b0faa.js" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" async></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/app.js"></script>
 <!-- Google Lzo Media tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSK9XHKSDH"></script>
