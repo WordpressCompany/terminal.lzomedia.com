@@ -14,7 +14,7 @@
             </h1>
         </div>
         <div class="col-lg-12 col-xs-12 col-md-12">
-            <div class="terminal-timeline">
+
 
 				<?php
 				$paged    = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -33,9 +33,11 @@
 
                         <div class="terminal-card">
                             <header>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
+                                <h2>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h2>
                             </header>
                             <div>
                                <?php the_excerpt(); ?>
@@ -45,7 +47,7 @@
 
 
 				<?php endwhile; ?>
-        </div>
+
             <div class="row center-xs" style="margin-top:4rem;margin-bottom: 4rem">
                 <div class="col-lg-12">
                     <div class="pagination">

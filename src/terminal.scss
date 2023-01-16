@@ -1,0 +1,28 @@
+[data-term-replay] {
+  bottom: 0px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.5em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 0px;
+}
+
+[data-term-replay]:hover {
+  color: var(--text);
+}
+
+.shell [data-term-input]:before {
+  color: var(--prompt);
+  content: '$';
+  margin-right: 0.5em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+[data-term-cursor]:after {
+  content: '_';
+  animation: blink 1s infinite;
+}
