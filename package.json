@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch" : "npx mix watch"
+    "dev": "npx mix watch",
+    "prod": "npx mix --production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "laravel-mix": "^6.0.43"
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.1.0"
   },
   "dependencies": {
-    "lightweight-animated-js-terminal": "^1.0.1"
+    "lightweight-animated-js-terminal": "^1.0.1",
+    "terminal.css": "^0.7.2"
   }
 }

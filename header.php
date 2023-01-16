@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="theme-color" content="#ffffff"/>
+    <meta name="theme-color" content="#222222"/>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
     <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
           type="text/css">
+    <script src="https://kit.fontawesome.com/0ee24b0faa.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
 </head>
@@ -30,6 +32,7 @@
         <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
             <a href="<?php bloginfo("url"); ?>" class="no-style">
               <?php bloginfo('name'); ?>
+                <i class="fa-regular fa-terminal"></i>
             </a>
             <br>
             <small style="font-size: 12px">
@@ -37,7 +40,7 @@
             </small>
         </div>
 
-        <nav class="terminal-menu col-lg-6 col-md-6 col-xs-12">
+        <nav class="terminal-menu col-lg-6 col-md-12 col-xs-12">
             <?php
             wp_nav_menu(
                 array(

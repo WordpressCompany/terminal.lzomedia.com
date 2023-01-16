@@ -38,3 +38,10 @@ add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
 
 
 
+if ( ! is_admin() ) {
+    $date = (file_exists(get_template_directory() . '/css/main.css')) ? date('YmdHi', filemtime(get_template_directory() . '/css/main.css')) : 1;
+
+    wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.css', array(), $date);
+
+}
+

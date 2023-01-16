@@ -1,13 +1,13 @@
 /*
 Theme Name: Terminal
 Text Domain: Terminal
-Version: 2.5.0
+Version: 2.5.1
 Requires at least: 5.0
 Requires PHP: 8.1
 Author: LzoMedia
-Author URI: https://develpment.sh/
-Theme URI: https://develpment.sh/terminal/
-License: GNU General Public License v2 or later
+Author URI: https://lzomedia.com/
+Theme URI: https://lzomedia.com/projects/terminal
+License: MIT License
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 All files, unless otherwise stated, are released under the GNU General Public
@@ -19,124 +19,3 @@ with others.
 This theme is automatically update using github release system.
 */
 
-:root {
-    --global-font-size: 1.3em;
-    --global-line-height: 1.4em;
-    --font-stack: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
-    --background-color: #222225;
-    --page-width: 60em;
-    --font-color: #a7aaad;
-    --invert-font-color: #222225;
-    --secondary-color: #a3abba;
-    --tertiary-color: #a3abba;
-    --primary-color: green;
-    --error-color: #ff3c74;
-    --progress-bar-background: #3f3f44;
-    --progress-bar-fill: #62c4ff;
-    --code-bg-color: #3f3f44;
-    --input-style: solid;
-    --display-h1-decoration: none;
-    --muted: #887880;
-    --prompt: #50fa7b;
-    --terminal: #282a36;
-    --text: #D9D3D7;
-}
-.text-center
-{
-    text-align: center;
-}
-
-.terminal {
-    border-radius:3px;
-    color: var(--text);
-    display: block;
-    font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
-    font-size: 1em;
-    font-smooth: antialiased;
-    line-height: 1.2em;
-    padding: 1em;
-    position: relative;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.terminal code {
-    display: block;
-}
-
-.editor {
-    counter-reset: line;
-}
-
-.editor code:before {
-    color: var(--prompt);
-    content: counter(line);
-    counter-increment: line;
-    margin-right: 0.5em;
-}
-
-[data-term-replay] {
-    bottom: 0px;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: 0.5em;
-    padding: 1em 2em;
-    position: absolute;
-    right: 0px;
-}
-
-[data-term-replay]:hover {
-    color: var(--text);
-}
-
-.shell [data-term-input]:before {
-    color: var(--prompt);
-    content: '$';
-    margin-right: 0.5em;
-}
-
-.muted {
-    color: var(--muted);
-}
-
-[data-term-cursor]:after {
-    content: '_';
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%{opacity: 0;}
-    50%{opacity: .9;}
-    100%{opacity: 1;}
-}
-hr {
- margin-top: 10px;
-    margin-bottom: 5px;
-}
-span.heart {
-    color: green;
-    font-size: 1.5em;
-}
-img{
-    width: auto !important;
-    content: "";
-    clear: both;
-    display: table;
-    max-width: -webkit-fill-available;
-}
-div.pagination > a{
-    color: var(--text);
-}
-ol.terminal-toc li a{
-    background: none !important;
-}
-ol{
-    list-style: none !important;
-}
-
-strong.entity{
-    color: green !important;
-}
-strong.entity span {
-    display: none;
-}

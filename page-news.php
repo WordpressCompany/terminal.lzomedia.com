@@ -9,44 +9,63 @@
 <section class="container">
     <div class="row">
         <div class="col-lg-12">
-            <ol class="terminal-toc">
+            <table>
+                <caption>
+                   <h1>
+                       <?php the_title();?>
+                   </h1>
+                    <p>
+                        <?php the_content();?>
+                    </p>
+                </caption>
+                <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+
+
 				<?php
 				$paged    = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$args     = [
 					'post_type'      => 'post',
-					'posts_per_page' => 45,
+					'posts_per_page' => 15,
 					'paged'          => $paged,
 				];
 				$wp_query = new WP_Query( $args );
 
 				while ( have_posts() ) : the_post(); ?>
-                    <li>
+
+                <tbody>
+                <tr>
+                    <th>
+                        <?php echo $wp_query->current_post + 1; ?>
+                    </th>
+                    <td>
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>
                         </a>
-                    </li>
+                    </td>
+                </tr>
+                </tbody>
+
+
 				<?php endwhile; ?>
-
-
-            </ol            <!-- then the pagination links -->
+            </table>
             <div class="row center-xs" style="margin-top:4rem;margin-bottom: 4rem">
-                <?php if ( ! empty(get_previous_posts_link("Newer posts &rarr;"))):?>
-                <div class="col-xs-6">
-                    <div class="box pagination btn btn-primary">
-
-						<?php next_posts_link( '&larr; Older posts' ); ?>
+                <div class="col-lg-12">
+                    <div class="pagination">
+                        <?php
+                        echo "<div class='fz-pagination'>" . paginate_links(array(
+                                'total' => $wp_query->max_num_pages,
+                                'show_all'           => false,
+                                'prev_text' => __('<div class="preious-page btn btn-primary btn-block">Prev</div>'),
+                                'next_text' => __('<div class="next-page btn btn-primary btn-block">Next</div>')
+                            )) . "</div>";
+                        ?>
                     </div>
                 </div>
-                <?php endif; ?>
-
-
-                <?php if ( ! empty(get_previous_posts_link("Newer posts &rarr;"))):?>
-                <div class="col-xs-6">
-                    <div class="box pagination btn btn-primary">
-						<?php previous_posts_link( 'Newer posts &rarr;' ); ?>
-                    </div>
-                </div>
-                <?php endif; ?>
             </div>
         </div>
     </div>
