@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
           type="text/css">
     <script src="https://kit.fontawesome.com/0ee24b0faa.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet"
+          href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
 </head>

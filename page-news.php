@@ -57,12 +57,14 @@
                 <div class="col-lg-12">
                     <div class="pagination">
                         <?php
-                        echo "<div class='fz-pagination'>" . paginate_links(array(
-                                'total' => $wp_query->max_num_pages,
-                                'show_all'           => false,
-                                'prev_text' => __('<div class="preious-page btn btn-primary btn-block">Prev</div>'),
-                                'next_text' => __('<div class="next-page btn btn-primary btn-block">Next</div>')
-                            )) . "</div>";
+                        $options = [
+                            'prev_text' => '«',
+                            'prev_next' => false,
+                            'next_text' => '»',
+                            'next_next' => false,
+                            'show_all'  => true,
+                        ];
+                        echo "<div class='fz-pagination'>" . paginate_links($options) . "</div>";
                         ?>
                     </div>
                 </div>

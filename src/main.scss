@@ -24,12 +24,31 @@
   --display-h1-decoration: none;
 }
 @import "terminal.css";
-@import "resets.css";
+@import "resets";
+@import "editor";
+@import "terminal";
 
 html{
   margin-top: 0 !important;
 
   body{
+
+    main{
+      --global-font-size--menu: 1.8rem !important;
+    }
+    ol > li{
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    pre {
+      background-color: var(--code-bg-color) !important;
+      overflow-x: initial;
+      code{
+        background-color: var(--code-bg-color) !important;
+        overflow-x: initial;
+      }
+    }
+
     .terminal {
       border-radius:3px;
       color: var(--text);
@@ -46,7 +65,26 @@ html{
         display: block;
       }
     }
-
+    .terminal-card {
+      header {
+        background-color: var(--primary-color) !important;
+        color: var(--font-color) !important;
+        h2 {
+          color: var(--font-color) !important;
+          font-size: 1.8rem;
+          margin-bottom: 0px;
+          text-align: left;
+          padding: var(--global-space);
+          a{
+            color: var(--font-color) !important;
+          }
+        }
+      }
+      div > p {
+        margin-bottom: 0px;
+      }
+      margin-bottom: 35px;
+    }
     .editor {
       counter-reset: line;
       code:before {
@@ -56,66 +94,21 @@ html{
         margin-right: 0.5em;
       }
     }
-
+    .terminal-menu li a:not(.btn){
+      color: var(--primary-color);
+      font-size: var(--global-font-size--menu);
+    }
     .text-left {
       text-align: left !important;
     }
-
-    main{
-      --global-font-size--menu: 1.8rem !important;
+    .text-right {
+      text-align: right !important;
     }
-    span.heart {
+    .heart {
       color: green;
       font-size: 1.5em;
     }
-    .terminal-menu li a:not(.btn){
-        color: var(--primary-color);
-      font-size: var(--global-font-size--menu);
-    }
-
-
-    pre {
-      background-color: var(--code-bg-color) !important;
-      overflow-x: initial;
-      code{
-        background-color: var(--code-bg-color) !important;
-        overflow-x: initial;
-      }
-    }
-
   }
 
 
-
-
-}
-
-
-[data-term-replay] {
-  bottom: 0px;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 0.5em;
-  padding: 1em 2em;
-  position: absolute;
-  right: 0px;
-}
-
-[data-term-replay]:hover {
-  color: var(--text);
-}
-
-.shell [data-term-input]:before {
-  color: var(--prompt);
-  content: '$';
-  margin-right: 0.5em;
-}
-
-.muted {
-  color: var(--muted);
-}
-
-[data-term-cursor]:after {
-  content: '_';
-  animation: blink 1s infinite;
 }
