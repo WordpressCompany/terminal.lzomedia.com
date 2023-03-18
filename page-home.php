@@ -4,7 +4,7 @@
 <section class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1 title="<?php the_title();?>" class="text-left">
+            <h1 title="<?php the_title();?>" class="text-center">
                 <?php the_title();?>
             </h1>
             <p>
