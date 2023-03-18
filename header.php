@@ -34,7 +34,7 @@
         <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
             <a href="<?php bloginfo("url"); ?>" class="no-style">
               <?php bloginfo('name'); ?>
-                <i class="fa-regular fa-terminal"></i>
+                &hearts;
             </a>
             <br>
             <small style="font-size: 12px">
@@ -47,7 +47,7 @@
             wp_nav_menu(
                 array(
                     'theme_location' => 'main',
-                    'container' => false,
+                    'container' => true,
                 )
             );
             ?>
