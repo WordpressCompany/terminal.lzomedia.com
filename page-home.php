@@ -4,7 +4,7 @@
 <section class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="text-left">
+            <h1 title="<?php the_title();?>" class="text-left">
                 <?php the_title();?>
             </h1>
             <p>
@@ -12,6 +12,8 @@
             </p>
         </div>
     </div>
+
+
     <div class="row">
         <div class="col-lg-12">
             <table>
@@ -26,7 +28,7 @@
                 $paged = get_query_var('paged');
                 $args     = [
                     'post_type'      => 'post',
-                    'posts_per_page' => 5,
+                    'posts_per_page' => 10,
                     'paged' => $paged,
                     'orderby' => 'date',
                     'order' => 'DESC',
@@ -59,6 +61,7 @@
             </div>
         </div>
     </div>
+
 </section>
 
 
