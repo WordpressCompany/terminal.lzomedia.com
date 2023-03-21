@@ -29,9 +29,8 @@
 
 <main id="page">
 <header class="container">
-    <div class="row">
-
-        <div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
+    <div class="row center-xs" >
+        <div class="logo terminal-prompt col-lg-12 col-md-6 col-xs-12">
             <a href="<?php bloginfo("url"); ?>" class="no-style">
               <?php bloginfo('name'); ?>
                 &hearts;
@@ -41,16 +40,33 @@
                 <?php bloginfo('description'); ?>
             </small>
         </div>
-
-        <nav class="terminal-menu col-lg-6 col-md-12 col-xs-12">
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'main',
-                    'container' => true,
-                )
-            );
-            ?>
-        </nav>
     </div>
+    <div class="row center-xs">
+        <div class="col-lg-6 col-offset-lg-6">
+            <nav class="terminal-menu col-lg-6 col-md-12 col-xs-12">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main',
+                        'container' => true,
+                        'menu_class' => 'myMenu',
+                    )
+                );
+                ?>
+            </nav>
+        </div>
+    </div>
+    <div class="row center-xs">
+        <div class="col-lg-12">
+            <hr>
+        </div>
+    </div>
+
 </header>
+    <style>
+        ul.myMenu {
+            margin-top: 1em;
+            text-align: right;
+            display: inline-flex;
+        }
+    </style>

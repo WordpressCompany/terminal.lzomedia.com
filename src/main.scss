@@ -32,6 +32,14 @@ html{
   margin-top: 0 !important;
 
   body{
+    p{
+      line-height: 1.8;
+    }
+
+    b, strong{
+      font-weight: 600;
+      color: #00a32a;
+    }
 
     main{
       --global-font-size--menu: 1.8rem !important;
@@ -109,6 +117,4 @@ html{
       font-size: 1.5em;
     }
   }
-
-
 }

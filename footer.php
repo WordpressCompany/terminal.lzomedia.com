@@ -1,12 +1,12 @@
 <?php
-$protocols = array('https://');
+$protocols = array('https://', 'http://');
 $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
 ?>
 <footer class="container">
     <hr>
     <div class="row">
         <div class="col-lg-12">
-            <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a href="https://github.com/lzomedia">Stefan Izdrail</a></small>
+            <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a href="https://github.com/cornatul">Stefan Izdrail</a></small>
         </div>
     </div>
 </footer>
@@ -33,5 +33,6 @@ $domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
 
     gtag('config', 'G-VSK9XHKSDH');
 </script>
+<!-- Google Lzo Media tag (gtag.js) -->
 </body>
 </html>
