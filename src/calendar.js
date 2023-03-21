@@ -12,7 +12,7 @@ const App = () => {
             <PopupButton
                 className={"btn btn-primary"}
                 styles={{ height: '100%' }}
-                url="https://calendly.com/unixdevil/15min"
+                url="https://calendly.com/cornatul/15min"
                 /*
                  * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
                  * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
