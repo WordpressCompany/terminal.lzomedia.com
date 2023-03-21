@@ -11,12 +11,7 @@
         <div class="col-lg-12">
             <table>
                 <caption>
-                   <h1>
-                       <?php the_title();?>
-                   </h1>
-                    <p>
                         <?php the_content();?>
-                    </p>
                 </caption>
                 <thead>
                 <tr>
@@ -30,7 +25,7 @@
 				$paged    = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$args     = [
 					'post_type'      => 'post',
-					'posts_per_page' => 15,
+					'posts_per_page' => 35,
 					'paged'          => $paged,
 				];
 				$wp_query = new WP_Query( $args );
