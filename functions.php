@@ -5,7 +5,7 @@ include 'includes/RegisterCustomEndpoint.php';
 //// The theme update logic
 require 'update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/lzomedia/terminal/',
+    'https://github.com/cornatul/lzomedia.com/',
     __FILE__,
     'terminal'
 );
