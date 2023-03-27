@@ -1,7 +1,7 @@
 /*
 Theme Name: Terminal
 Text Domain: Terminal
-Version: 3.0
+Version: 3.1
 Requires at least: 5.0
 Requires PHP: 8.1
 Author: LzoMedia
@@ -19,3 +19,16 @@ with others.
 This theme is automatically update using github release system.
 */
 
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: green;
+    outline: 1px solid green;
+}
