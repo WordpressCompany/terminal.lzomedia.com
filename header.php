@@ -56,6 +56,7 @@
             </nav>
         </div>
     </div>
+
     <div class="row center-xs">
         <div class="col-lg-12">
             <hr>

@@ -5,30 +5,6 @@ $domain = str_replace($protocols, '', get_bloginfo('wpurl'));
 <footer class="container">
     <hr>
     <div class="row center-xs">
-        <div class="col-lg-12" style="padding-bottom: 2vh">
-            <a href="https://twitter.com/cornatul" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/cornatul/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/cornatul" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/cornatul/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/cornatul" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCATvoW-E8jPB2jIkUhfXygw" target="_blank"
-               rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.pinterest.com/cornatul/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-pinterest"></i></a>
-            <a href="https://www.flickr.com/photos/cornatul/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-flickr"></i></a>
-            <a href="https://www.reddit.com/user/cornatul" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-reddit"></i></a>
-            <a href="https://www.tumblr.com/blog/cornatul" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-tumblr"></i></a>
-        </div>
-    </div>
-    <div class="row center-xs">
         <div class="col-lg-12">
             <small>Design with <span class="heart">&hearts;</span> and open source in mind by <a
                         href="https://github.com/cornatul">Stefan aka @Cornatul </a></small>
