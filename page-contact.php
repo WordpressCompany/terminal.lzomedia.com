@@ -1,18 +1,26 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Contact
  */
 ?>
 <?php get_header(); ?>
 
 <section class="container">
-    <div class="row center-xs">
+    <div class="row">
+        <div class="col-lg-12 col-xs-12 col-md-12">
+            <h1 title="<?php the_title(); ?>" class="text-center">
+                <?php the_title(); ?>
+            </h1>
+            <br>
+        </div>
+
         <div class="col-lg-12 col-xs-12 col-md-12">
             <div class="text-center">
                 <?php the_content(); ?>
             </div>
         </div>
     </div>
+
     <div class="row center-xs">
         <div class="col-lg-12 col-xs-12 col-md-12">
             <div class="text-center" id="calendar"></div>
