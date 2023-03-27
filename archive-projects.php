@@ -9,15 +9,6 @@
 <section class="container">
     <div class="row center-xs">
         <div class="col-lg-12 col-xs-12 col-md-12">
-            <h1>
-                My latest projects
-            </h1>
-        </div>
-    </div>
-    <div class="row center-xs">
-        <div class="col-lg-12 col-xs-12 col-md-12">
-
-
 				<?php
 				$paged    = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$args     = [
